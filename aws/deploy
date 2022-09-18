@@ -1,0 +1,5 @@
+hugo -D
+wait -n
+aws s3 cp public s3://red-queen.io/ --profile red-queen --recursive --acl public-read
+wait -n
+aws cloudfront create-invalidation --distribution-id ETW95G35E2MZT --paths $1 --profile red-queen 

@@ -1,0 +1,2 @@
+echo $1
+aws cloudfront create-invalidation --distribution-id ETW95G35E2MZT --paths $1 --profile red-queen 
